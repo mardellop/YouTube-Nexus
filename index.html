@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube | NEXUS SEAMLESS</title>
+    <link rel="icon" type="image/png" href="Youtube_logo.png">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Simulación premium de YouTube con diseño moderno y reactivo. Explora contenido y disfruta de un feed simulado.">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <button class="menu-btn" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+            <a href="#" class="logo">
+                <i class="fa-brands fa-youtube"></i>
+                <span class="logo-text">YouTube<sup class="logo-es">ES</sup></span>
+            </a>
+        </div>
+        
+        <div class="header-center">
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" placeholder="Search">
+                </div>
+                <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <button class="mic-btn"><i class="fa-solid fa-microphone"></i></button>
+        </div>
+        
+        <div class="header-right">
+            <button class="create-btn"><i class="fa-solid fa-plus"></i> Create</button>
+            <button class="icon-btn" title="Notificaciones"><i class="fa-regular fa-bell"></i></button>
+            <div class="user-profile" style="margin-left: 8px;">
+                <img src="Logo Nexus.jpg" alt="Mi Perfil" id="userProfileImg">
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar" id="sidebar">
+            <a href="#" class="sidebar-item active">
+                <i class="fa-solid fa-house"></i>
+                <span>Inicio</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <i class="fa-solid fa-bolt"></i>
+                <span>Shorts</span>
+            </a>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Suscripciones</div>
+                <a href="#" class="sidebar-item">
+                    <img src="../david.jpg" alt="Pantry Chef" style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover;">
+                    <span>Pantry Chef</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <img src="../elena.jpg" alt="Mundo viajes" style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover;">
+                    <span>Mundo viajes</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <img src="../sofia.jpg" alt="LoFi 2.0" style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover;">
+                    <span>LoFi 2.0</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <img src="https://i.pravatar.cc/150?u=gamer" alt="Gamer Zone" style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover;">
+                    <span>Gamer Zone</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Explorar canales</span>
+                </a>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title" style="cursor: pointer;">Tú <i class="fa-solid fa-chevron-right" style="font-size: 12px; margin-left: 8px;"></i></div>
+                <a href="#" class="sidebar-item" style="background-color: var(--yt-hover);">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span>Historia</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="fa-solid fa-list"></i>
+                    <span>Listas de reproducc...</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Ver más tarde</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    <span>Vídeos que me gus...</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Descargas</span>
+                </a>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">Explore</div>
+                <a href="#" class="sidebar-item">
+                    <i class="fa-solid fa-music" style="font-size: 18px;"></i>
+                    <span>Música</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="fa-solid fa-clapperboard" style="font-size: 18px;"></i>
+                    <span>Cine</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="fa-solid fa-tower-broadcast" style="font-size: 18px;"></i>
+                    <span>Live</span>
+                </a>
+                <a href="#" class="sidebar-item" id="exploreShowMore">
+                    <i class="fa-solid fa-chevron-down" style="font-size: 18px;"></i>
+                    <span>Mostrar más</span>
+                </a>
+                
+                <div id="exploreExpanded" style="display: none;">
+                    <a href="#" class="sidebar-item">
+                        <i class="fa-solid fa-gamepad" style="font-size: 18px;"></i>
+                        <span>Gaming</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="fa-regular fa-newspaper" style="font-size: 18px;"></i>
+                        <span>Noticias</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="fa-solid fa-trophy" style="font-size: 18px;"></i>
+                        <span>Deportes</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="fa-regular fa-lightbulb" style="font-size: 18px;"></i>
+                        <span>Learning</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="fa-solid fa-podcast" style="font-size: 18px;"></i>
+                        <span>Podcasts</span>
+                    </a>
+                    <a href="#" class="sidebar-item" id="exploreShowLess">
+                        <i class="fa-solid fa-chevron-up" style="font-size: 18px;"></i>
+                        <span>Mostrar menos</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Más de YouTube</div>
+                <a href="#" class="sidebar-item">
+                    <i class="fa-brands fa-youtube" style="color: #ff0000; font-size: 18px;"></i>
+                    <span>YouTube Premium</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="fa-solid fa-circle-play" style="color: #ff0000; font-size: 18px;"></i>
+                    <span>Música de YouTube</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="fa-brands fa-youtube" style="color: #ff0000; font-size: 18px;"></i>
+                    <span>YouTube Kids</span>
+                </a>
+            </div>
+
+            <div class="sidebar-section">
+                <a href="#" class="sidebar-item">
+                    <i class="fa-regular fa-flag" style="font-size: 18px;"></i>
+                    <span>Historial del informe</span>
+                </a>
+            </div>
+
+            <div class="sidebar-section sidebar-footer" style="padding: 12px 24px; font-size: 12px; color: var(--yt-gray-text); line-height: 1.5; font-weight: 500;">
+                <div style="margin-bottom: 8px;">
+                    <a href="#" style="color: inherit; text-decoration: none; margin-right: 8px;">Acerca de</a>
+                    <a href="#" style="color: inherit; text-decoration: none; margin-right: 8px;">Prensa</a><br>
+                    <a href="#" style="color: inherit; text-decoration: none; margin-right: 8px;">Derechos de autor</a><br>
+                    <a href="#" style="color: inherit; text-decoration: none; margin-right: 8px;">Contáctanos</a>
+                    <a href="#" style="color: inherit; text-decoration: none; margin-right: 8px;">Creadores</a><br>
+                    <a href="#" style="color: inherit; text-decoration: none; margin-right: 8px;">Anunciar</a>
+                    <a href="#" style="color: inherit; text-decoration: none; margin-right: 8px;">Desarrolladores</a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="content" id="homePage">
+            <div class="chips-container">
+                <div class="chip active">Todos</div>
+                <div class="chip">Música</div>
+                <div class="chip">Videojuegos</div>
+                <div class="chip">Mixes</div>
+                <div class="chip">Directo</div>
+                <div class="chip">Tecnología</div>
+                <div class="chip">Mascotas</div>
+                <div class="chip">Viajes</div>
+                <div class="chip">Gastronomía</div>
+                <div class="chip">Recientemente subido</div>
+                <div class="chip">Visto</div>
+                <div class="chip">Novedad para ti</div>
+            </div>
+
+            <div class="video-grid" id="videoGrid">
+                <!-- Video cards loaded by JS -->
+            </div>
+        </main>
+
+        <main class="watch-page" id="watchPage" style="display: none;">
+            <div class="watch-container">
+                <div class="watch-left">
+                    <div class="player-container" id="playerContainer">
+                        <!-- Video embed here -->
+                    </div>
+                    <div class="watch-info">
+                        <h1 id="watchTitle">Título del Vídeo</h1>
+                        <div class="watch-actions">
+                            <div class="channel-wrapper">
+                                <div class="channel-icon">
+                                    <img src="../sofia.jpg" alt="Canal" id="watchChannelIcon">
+                                </div>
+                                <div class="channel-details">
+                                    <span class="channel-name" id="watchChannelName">Nombre del Canal</span>
+                                    <span class="subs-count">1.4 M de suscriptores</span>
+                                </div>
+                                <button class="subscribe-btn">Suscribirse</button>
+                            </div>
+                            <div class="action-buttons">
+                                <div class="like-dislike">
+                                    <button class="action-btn"><i class="fa-regular fa-thumbs-up"></i> 15 K</button>
+                                    <button class="action-btn"><i class="fa-regular fa-thumbs-down"></i></button>
+                                </div>
+                                <button class="action-btn"><i class="fa-solid fa-share"></i> Compartir</button>
+                                <button class="action-btn"><i class="fa-solid fa-download"></i> Descargar</button>
+                                <button class="action-btn"><i class="fa-solid fa-ellipsis"></i></button>
+                            </div>
+                        </div>
+                        <div class="video-description">
+                            <div class="desc-meta">
+                                <span id="watchViews">500 K visualizaciones</span>
+                                <span id="watchTime">hace 1 semana</span>
+                            </div>
+                            <p id="watchDesc">Descripción del vídeo... Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                            <span class="show-more">Mostrar más</span>
+                        </div>
+                    </div>
+                    <!-- Comments section placeholder -->
+                    <div class="comments-section">
+                        <h3>1445 comentarios</h3>
+                        <div class="add-comment">
+                            <img src="Logo Nexus.jpg" alt="Perfil">
+                            <input type="text" placeholder="Añade un comentario...">
+                        </div>
+                    </div>
+                </div>
+                <div class="watch-right">
+                    <div class="next-videos" id="nextVideosGrid">
+                        <!-- Related videos loaded by JS -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
