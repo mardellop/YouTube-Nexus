@@ -83,7 +83,7 @@ No te quedes fuera de la revolución.
             views: "582 K de visualizaciones",
             time: "hace 17 días",
             thumbnail: "https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=600&q=80",
-            avatar: "../david.jpg",
+            avatar: "pantry-logo.jpg",
             duration: "10:05",
             category: "Gastronomía",
             desc: "Técnicas avanzadas pero sencillas para lograr ese punto perfecto en tu carne. ¡Buen provecho!"
