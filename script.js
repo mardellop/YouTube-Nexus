@@ -216,7 +216,7 @@ No te quedes fuera de la revolución.
 
         // Inject Local Video Player
         playerContainer.innerHTML = `
-<iframe 
+    <iframe 
         src="https://drive.google.com/file/d/1wxwLm4tmTq55243WNHHAuCM0OAdjRaoh/preview" 
         width="640" 
         height="360" 
