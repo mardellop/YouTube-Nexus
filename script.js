@@ -217,7 +217,7 @@ No te quedes fuera de la revolución.
         // Inject Local Video Player
         playerContainer.innerHTML = `
             <video controls autoplay style="width: 100%; height: 100%; object-fit: contain; background: black; outline: none;">
-                <source src="Video YouTube.mp4" type="video/mp4">
+                <source src="https://drive.google.com/file/d/1wxwLm4tmTq55243WNHHAuCM0OAdjRaoh/view" type="video/mp4">
                 Tu navegador no soporta la reproducción de vídeo.
             </video>
         `;
